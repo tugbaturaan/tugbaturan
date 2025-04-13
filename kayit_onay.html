@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kayıt Onay</title>
+</head>
+
+<body style="background-color: black; color: white; text-align: center;">
+
+    <script>
+        var degerler = new URLSearchParams(window.location.search);
+        var ad = degerler.get('isim');
+        var email = degerler.get('email');
+        var tel= degerler.get('tel');
+        var yas = degerler.get('yas');
+        var taraf = degerler.get('taraf');
+
+        document.write("<h1>Tebrikler " + ad + "!</h1>");
+        document.write("<p>Kayıt onaylandı. Email adresin: " + email + "</p>");
+
+        var mesaj = "<strong>" + ad + "</strong>, artık daha büyük bir evrenin parçasısın! <br>";
+
+        if (taraf === "Aydınlık") {
+            mesaj += "Jedi Akademisi'ne hoş geldin. Güç seninle olsun!";
+        } else if (taraf === "Karanlık") {
+            mesaj += "Karanlık Taraf'a hoş geldin. Gücün cazibesine kapıl!";
+        } else {
+            mesaj += "Tarafını seçmek için asla geç değildir...";
+        }
+
+        // Mesajı sayfaya yazdır
+        document.write("<p>" + mesaj + "</p>");
+    </script>
+
+    <h3>Bağlantılar</h3>
+    <ul>
+        <li><a href="index.html" style="color: yellow;">Ana Sayfa</a></li>
+    </ul>
+
+</body>
+
+</html>

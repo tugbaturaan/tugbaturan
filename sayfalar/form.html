@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galaktik Üyelik Formu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+       <link rel="stylesheet" href="../styles/style.css?v=2">
+<link rel="icon" href="../sayfalar/img/favicon.png" type="image/png">
+    
+
+</head>
+
+<body>
+    <!-- NAVBAR -->
+      <nav>
+        <a href="/index.html">Ana Sayfa</a>
+        <a href="../sayfalar/filmler.html">Filmler</a>
+        <a href="../sayfalar/hakkimizda.html">Hakkımızda</a>
+        <a href="../sayfalar/sss.html">SSS</a>
+        <a href="../sayfalar/form.html">Üye Ol</a>
+        <a href="../sayfalar/test.html">Test</a>
+    </nav>
+
+
+    <!-- İÇERİK -->
+    <main class="form-container">
+        <h1>Galaktik Cumhuriyet Üyelik Formu</h1>
+        <p class="form-slogan">“Daha büyük bir evrene adım atıyorsun.” - Obi-Wan Kenobi</p>
+
+        <form action="kayit_onay.html" method="get">
+            <label for="isim">İsim Soyisim:</label>
+            <input type="text" id="isim" name="isim" placeholder="Adınızı giriniz" required>
+
+            <label for="sifre">Şifre:</label>
+            <input type="password" id="sifre" name="sifre" required>
+
+            <label for="email">E-posta:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="tel">Telefon:</label>
+            <input type="tel" id="tel" name="tel" placeholder="0 5XX XXX XX XX">
+
+            <label for="yas">Yaş:</label>
+            <input type="number" id="yas" name="yas" min="13" max="100">
+
+           <div class="taraf-secimi">
+    <label for="taraf">Hangi tarafı seçiyorsun?</label><br>
+
+    <input type="radio" id="aydinlik" name="taraf" value="Aydınlık">
+    <label for="aydinlik" class="aydinlik-label">Aydınlık Taraf</label>
+
+    <input type="radio" id="karanlik" name="taraf" value="Karanlık">
+    <label for="karanlik" class="karanlik-label">Karanlık Taraf</label>
+</div>
+
+
+    
+     <div class="form-butonlari">
+    <button class="kayit-btn">Kayıt Ol</button>
+    <button class="temizle-btn">Tümünü Temizle</button>
+</div>
+
+
+        </form>
+    </main>
+
+   
+    <footer class="galactic-footer">
+        <p>
+            <small>&copy; <time datetime="2025">2025</time> Star Wars Akademisi&trade;<br>
+                Tüm Hakları Saklıdır.</small>
+        </p>
+        <p>
+            <small>Star Wars&trade; ve ilgili tüm karakterler Lucasfilm Ltd.&reg;'ye aittir.</small>
+        </p>
+        <p>
+            <small>Bu web sitesi resmi bir Star Wars kaynağı değildir.
+                <a href="https://www.starwars.com" target="_blank">StarWars.com</a>'u ziyaret edin.
+            </small>
+        </p>
+    </footer>
+    <script src="../scripts/myscript.js"></script>
+</body>
+</html>

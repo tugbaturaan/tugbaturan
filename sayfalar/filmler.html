@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="icon" href="../sayfalar/img/favicon.png" type="image/png">
+    <title>Star Wars Filmleri</title>
+   
+</head>
+<body>
+
+    <!-- NAVIGATION BAR -->
+    <nav>
+        <a href="../index.html">Ana Sayfa</a>
+        <a href="filmler.html">Filmler</a>
+        <a href="hakkimizda.html">Hakkımızda</a>
+        <a href="sss.html">SSS</a>
+        <a href="form.html">Üye Ol</a>
+        <a href="test.html">Test</a>
+    </nav>
+
+    <h1 class="sw-title">Star Wars Filmleri</h1>
+
+    <div class="table-wrapper">
+        <table class="film-table">
+            <thead>
+                <tr>
+                    <th>Film</th>
+                    <th onclick="sortTable(1)">Yıl ⬍⬆</th>
+                    <th onclick="sortTable(2)">IMDb Puanı ⬍⬆</th>
+                    <th>Yönetmen</th>
+                    <th>Detaylar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>The Phantom Menace</td>
+                    <td>1999</td>
+                    <td>6.5</td>
+                    <td>George Lucas</td>
+                    <td><a href="phantom_menace.html">İncele</a></td>
+                </tr>
+                <tr>
+                    <td>Attack of the Clones</td>
+                    <td>2002</td>
+                    <td>6.6</td>
+                    <td>George Lucas</td>
+                    <td><a href="attack_of_the_clones.html">İncele</a></td>
+                </tr>
+                <tr>
+                    <td>Revenge of the Sith</td>
+                    <td>2005</td>
+                    <td>7.6</td>
+                    <td>George Lucas</td>
+                    <td><a href="revenge_of_the_sith.html">İncele</a></td>
+                </tr>
+                <tr>
+                    <td>A New Hope</td>
+                    <td>1977</td>
+                    <td>8.6</td>
+                    <td>George Lucas</td>
+                    <td><a href="a_new_hope.html">İncele</a></td>
+                </tr>
+                <tr>
+                    <td>The Empire Strikes Back</td>
+                    <td>1980</td>
+                    <td>8.7</td>
+                    <td>Irvin Kershner</td>
+                    <td><a href="empire_strikes_back.html">İncele</a></td>
+                </tr>
+                <tr>
+                    <td>Return of the Jedi</td>
+                    <td>1983</td>
+                    <td>8.3</td>
+                    <td>Richard Marquand</td>
+                    <td><a href="return_of_the_jedi.html">İncele</a></td>
+                </tr>
+                <tr>
+                    <td>The Force Awakens</td>
+                    <td>2015</td>
+                    <td>7.8</td>
+                    <td>J.J. Abrams</td>
+                    <td><a href="force_awakens.html">İncele</a></td>
+                </tr>
+                <tr>
+                    <td>The Last Jedi</td>
+                    <td>2017</td>
+                    <td>6.9</td>
+                    <td>Rian Johnson</td>
+                    <td><a href="last_jedi.html">İncele</a></td>
+                </tr>
+                <tr>
+                    <td>The Rise of Skywalker</td>
+                    <td>2019</td>
+                    <td>6.5</td>
+                    <td>J.J. Abrams</td>
+                    <td><a href="rise_of_skywalker.html">İncele</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <footer class="galactic-footer">
+        <p>
+            <small>&copy; <time datetime="2025">2025</time> Star Wars Akademisi&trade;<br>
+                Tüm Hakları Saklıdır.</small>
+        </p>
+        <p>
+            <small>Star Wars&trade; ve ilgili tüm karakterler Lucasfilm Ltd.&reg;'ye aittir.</small>
+        </p>
+        <p>
+            <small>Bu web sitesi resmi bir Star Wars kaynağı değildir.
+                <a href="https://www.starwars.com" target="_blank">StarWars.com</a>'u ziyaret edin.
+            </small>
+        </p>
+    </footer>
+     <script src="../scripts/filmler.js"></script>
+
+</body>
+</html>

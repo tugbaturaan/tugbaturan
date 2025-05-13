@@ -1,0 +1,1426 @@
+body {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background-color: black;
+    background-size: cover;
+    opacity: 0.4;
+    animation: starScroll 100s linear infinite;
+    z-index: -1;
+}
+
+@keyframes starScroll {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-50%, -50%);
+    }
+}
+/* Star Wars başlığına özel stil */
+.star-wars-title {
+    text-align: center; /* Başlık ortalanmış */
+    color: white; /* Başlık rengi beyaz */
+    font-family: 'Arial', sans-serif; /* Yazı tipi */
+    font-size: 3rem; /* Başlık boyutu */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.7), 0 0 30px rgba(255, 255, 255, 0.6); /* Parlama efekti */
+    margin-top: 50px; /* Üstten boşluk */
+    margin-bottom: 20px; /* Alttan boşluk */
+}
+
+/* Responsive tasarım (Mobil cihazlar için) */
+@media screen and (max-width: 768px) {
+    .star-wars-title {
+        font-size: 2.5rem; /* Mobilde başlık boyutunu biraz küçült */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .star-wars-title {
+        font-size: 2rem; /* Daha küçük ekranlar için başlık boyutunu daha da küçült */
+    }
+}
+
+/* =======================
+   HEADER
+======================= */
+
+header {
+    background-color: #000;
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 2px solid #FFE81F;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #FFE81F;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px #fff;
+}
+
+
+.form-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    box-shadow: 0 0 15px #ffe81f;
+}
+
+.form-container h1 {
+    color: #ffe81f;
+    text-align: center;
+    margin-bottom: 10px;
+    font-family: 'Orbitron', sans-serif; /* Sci-fi tarzı bir font (Google Fonts'tan eklenebilir) */
+}
+
+.form-slogan {
+    text-align: center;
+    color: #ccc;
+    font-style: italic;
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: none;
+    background-color: #2a2a2a;
+    color: white;
+    margin-top: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+input::placeholder {
+    color: #999;
+}
+
+.taraf-secimi {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.taraf-secimi input[type="radio"] {
+    margin-right: 5px;
+    transform: scale(1.2);
+}
+
+.aydinlik-label {
+    color: #00BFFF;
+    font-weight: bold;
+}
+
+.karanlik-label {
+    color: #FF4500;
+    font-weight: bold;
+}
+.form-butonlari {
+    margin-top: 30px;                  /* Üstten 30px boşluk bırakır */
+    display: flex;                     /* İçerikleri yatay eksende hizalamak için flexbox kullanır */
+    justify-content: center;          /* Butonları yatayda ortalar */
+    gap: 20px;                         /* Butonlar arasında 20px boşluk bırakır */
+}
+
+.kayit-btn,
+.temizle-btn {
+    padding: 10px 18px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.kayit-btn {
+    background-color: #5ac95d;
+    color: white;
+}
+
+.kayit-btn:hover {
+    background-color: #4caf50;
+}
+
+.temizle-btn {
+    background-color: #d5463e;
+    color: rgb(225, 127, 127);
+}
+
+.temizle-btn:hover {
+    background-color: #a85c59;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-butonlari {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+/* Arama Kutusu */
+.arama-alani {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#aramaKutusu {
+    width: 100%;
+    max-width: 400px;
+    padding: 8px;
+    background-color: #222;
+    color: #fff;
+    border: 1px solid #555;
+    border-radius: 5px;
+    outline: none;
+}
+
+#aramaKutusu::placeholder {
+    color: #aaa;
+}
+
+/* Üye Tablosu */
+.uyelik-tablosu {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.uyelik-tablosu th, .uyelik-tablosu td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ffffff33;
+}
+
+.uyelik-tablosu th {
+    background-color: #222;
+    color: #FFD700;
+    font-weight: bold;
+}
+
+.uyelik-tablosu td {
+    background-color: #333;
+    color: #fff;
+}
+
+.uyelik-tablosu tr:nth-child(even) {
+    background-color: #444;
+}
+
+/* Silme Butonu */
+.sil-button {
+    background-color: crimson;
+    color: white;
+    padding: 12px 25px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sil-button:hover {
+    background-color: darkred;
+}
+
+/* Footer */
+.galactic-footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+}
+.film-table {
+    width: 90%;
+    margin: 40px auto;
+    border-collapse: collapse;
+    background-color: #1b1b1b;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.film-table th,
+.film-table td {
+    padding: 14px 20px;
+    border: 1px solid #444;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    color: #ffe81f;
+}
+
+.film-table th {
+    background-color: #333;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #ffe81f;
+}
+
+.film-table tbody tr:nth-child(odd) {
+    background-color: #2a2a2a;
+}
+
+.film-table tbody tr:nth-child(even) {
+    background-color: #111;
+}
+
+.film-table tbody tr:hover {
+    background-color: #333;
+    transform: scale(1.02);
+    transition: all 0.3s ease-in-out;
+}
+
+.film-table a {
+    color: #ffcc00;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.film-table a:hover {
+    color: gold;
+    text-decoration: underline;
+    text-shadow: 0 0 5px #ffe81f;
+}
+
+.film-table td a {
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.film-table td a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.film-detay {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #111;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.film-detay h1 {
+    font-size: 2rem;
+    color: #ffcc00;
+    margin-bottom: 20px;
+}
+
+.film-detay p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.film-img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Başlıklar için */
+h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 26px;
+    color: #ffe81f; /* Star Wars sarısı */
+    border-left: 5px solid #ffe81f;
+    padding-left: 10px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+/* Liste linki */
+li a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffe81f;
+    transition: all 0.3s ease;
+}
+
+li a:hover {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-shadow: 0 0 5px #ffe81f;
+}
+
+/* Star Wars temalı buton */
+.star-wars-button {
+    background: linear-gradient(45deg, #ffcc00, #ff6600); /* Uzay temalı renk geçişi */
+    color: white; /* Yazı rengi beyaz */
+    font-family: 'Arial', sans-serif; /* Yazı tipi */
+    font-size: 1.2rem; /* Font boyutu */
+    padding: 15px 30px; /* Butonun iç boşluğu */
+    border: none; /* Kenarlık kaldırıldı */
+    border-radius: 8px; /* Yuvarlak köşeler */
+    cursor: pointer; /* Tıklanabilir işareti */
+    text-transform: uppercase; /* Büyük harf yapar */
+    letter-spacing: 2px; /* Harfler arası boşluk */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.7), 0 0 25px rgba(255, 255, 255, 0.5); /* Parlayan kenarlık */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease; /* Animasyon */
+}
+
+.star-wars-button:hover {
+    background: linear-gradient(45deg, #ff6600, #ffcc00); /* Hoverda renk geçişi ters olur */
+    transform: scale(1.1); /* Hoverda buton büyür */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 35px rgba(255, 255, 255, 0.8); /* Hoverda parlama artar */
+}
+
+.star-wars-button:focus {
+    outline: none; /* Tıklama sonrası kenarlık kaybolur */
+}
+
+/* =======================
+   NAVBAR (Navigasyon)
+======================= */
+
+.nav-container {
+    background-color: #111;
+    margin: 0 auto;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px #FFE81F88;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #FFE81F;
+    text-decoration: none;
+    padding: 15px;
+    font-weight: bold;
+    border: 1px solid #FFE81F;
+    border-radius: 8px;
+    margin: 5px;
+    transition: all 0.3s ease;
+    background-color: #222;
+    text-align: center;
+    width: 150px;
+}
+
+nav a:hover {
+    background-color: #FFE81F;
+    color: black;
+    transform: scale(1.1);
+}
+
+/* =======================
+   ANA İÇERİK
+======================= */
+
+main {
+      flex: 1;
+    padding: 30px;
+    max-width: 900px;
+    margin: auto;
+    background-color: rgba(20, 20, 20, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(255, 232, 31, 0.2);
+    text-align: center;
+}
+
+.question {
+    background-color: #222;
+    border: 1px solid #FFE81F;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px #FFE81F99;
+}
+
+.question h3 {
+    margin-top: 0;
+}
+
+.question label {
+    display: block;
+    margin: 10px 0;
+    padding-left: 10px;
+}
+
+/* =======================
+   BUTON STİLLERİ
+======================= */
+/* Buton stili */
+.button-style {
+    background-color: #1a73e8; /* Mavi renk */
+    color: white; /* Yazı rengi beyaz */
+    border: none; /* Kenarlık yok */
+    padding: 15px 32px; /* İçerik boşluğu (üst-alt, sağ-sol) */
+    text-align: center; /* Yazıyı ortalar */
+    text-decoration: none; /* Alt çizgiyi kaldırır */
+    display: inline-block; /* Butonun etrafında alan bırakır */
+    font-size: 16px; /* Yazı büyüklüğü */
+    cursor: pointer; /* Fare işaretçisi */
+    border-radius: 5px; /* Köşeleri yuvarlar */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Renk ve hareket geçişi */
+}
+
+/* Hover efekti */
+.button-style:hover {
+    background-color: #0f5bb5; /* Hover durumunda daha koyu mavi */
+    transform: scale(1.1); /* Buton biraz büyür */
+}
+
+/* Buton tıklanırken efekti */
+.button-style:active {
+    background-color: #0a487e; /* Tıklanırken daha koyu bir mavi */
+    transform: scale(1); /* Boyut sıfırlanır */
+}
+
+button[type="submit"] {
+    background-color: #FFE81F;
+    color: black;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    display: block;
+    margin: 30px auto;
+    transition: transform 0.2s;
+}
+
+button[type="submit"]:hover {
+    transform: scale(1.05);
+}
+
+/* =======================
+   SONUÇ GÖSTERME
+======================= */
+
+#result {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 1.5em;
+    background-color: #222;
+    padding: 20px;
+    border: 2px solid #FFE81F;
+    border-radius: 10px;
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+/* =======================
+   FOOTER
+======================= */
+/* Footer stil ayarları */
+/* Footer stil ayarları */
+.galactic-footer {
+    background-color: rgba(15, 15, 15, 0.85);
+    color: #ccc;
+    text-align: center;
+    padding: 15px 0; /* Daha küçük padding */
+    font-size: 0.75rem; /* Daha küçük font boyutu */
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 -2px 8px rgba(255, 255, 255, 0.1); /* Daha hafif gölge */
+    backdrop-filter: blur(3px); /* Daha az bulanık arka plan */
+    width: 100%;
+    margin-top: 40px; /* Daha küçük üst marjin */
+}
+
+.galactic-footer a {
+    color: #FFE81F;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.galactic-footer a:hover {
+    text-decoration: underline;
+    color: #fff;
+}
+
+/* Footer genel stil */
+footer {
+    background-color: #161b22;
+    color: #00ffff;
+    text-align: center;
+    padding: 10px; /* Daha küçük padding */
+    font-size: 12px; /* Daha küçük font boyutu */
+    margin-top: auto;
+    box-shadow: 0 -2px 6px rgba(0, 255, 255, 0.2); /* Daha hafif gölge */
+}
+
+
+
+/* Sayfanın tüm yüksekliğini kullanması için */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+  }
+  
+ 
+  
+
+
+
+/* Liste bağlantıları için stil */
+.go-to-section a {
+    color: #FFE81F;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 2px solid #FFE81F; /* Alt çizgi efekti */
+    padding-bottom: 3px;
+    transition: all 0.3s ease;
+}
+
+.go-to-section a:hover {
+    color: #000;
+    border-bottom: 2px solid #000; /* Alt çizgi rengini değiştirme */
+}
+/* Star Wars Trilogy Başlık ve İçerik Stili */
+h3 {
+    font-size: 2.5em;
+    color: #e8be33;
+    text-align: center;
+    text-shadow: 2px 2px 10px #fff;
+    margin-bottom: 20px;
+}
+/* Star Wars Trilogy Kutu Stil */
+/* Trilogy box içeriği ortalamak için */
+.trilogy-box {
+    width: 80%; /* İçeriğin genişliğini %80 yapalım */
+    margin: 0 auto; /* Sayfa ortasında yer almasını sağlamak için */
+    padding: 20px; /* İçeriğin etrafında biraz boşluk bırakmak için */
+}
+
+/* Filmler listesini ortalamak için */
+.trilogy-box ul {
+    list-style-type: none; /* Liste işaretlerini kaldırıyoruz */
+    padding: 0; /* Varsayılan padding'i sıfırlıyoruz */
+    margin: 0; /* Varsayılan margin'i sıfırlıyoruz */
+    display: flex; /* Liste öğelerini yatayda hizalamak için flexbox kullanıyoruz */
+    flex-wrap: wrap; /* Flex elemanları sarmalayıp alt satıra geçmesini sağlıyoruz */
+    justify-content: center; /* Yatayda ortalamak için */
+}
+
+/* Liste öğelerine düzenleme */
+.trilogy-box ul li {
+    text-align: center; /* Metni ortalamak için */
+    margin: 15px; /* Liste öğeleri arasında boşluk bırakmak için */
+    font-size: 1.1rem; /* Yazı boyutunu artırmak için */
+}
+
+/* Filmler ve açıklamalar için düzenleme */
+.trilogy-box li strong {
+    font-size: 1.2rem; /* Film başlıklarının font boyutunu artırıyoruz */
+    color: #FFD700; /* Altın rengiyle başlıkları daha belirgin yapıyoruz */
+}
+
+/* Paragraflar için ortalama */
+.trilogy-box p {
+    text-align: center; /* Paragrafları yatayda ortalıyoruz */
+    margin: 0 auto; /* Ortalamayı sağlıyoruz */
+    width: 80%; /* Paragrafların genişliğini sınırlıyoruz */
+    font-size: 1rem; /* Font boyutunu düzenli tutuyoruz */
+    line-height: 1.6; /* Satır aralığını artırıyoruz */
+}
+
+/* Filmlerin başlıklarını vurgulamak */
+h3 {
+    text-align: center; /* Başlıkları ortalıyoruz */
+    font-size: 1.5rem; /* Başlık boyutunu büyütüyoruz */
+    margin-bottom: 20px; /* Başlık ile metin arasında boşluk bırakıyoruz */
+}
+/* Film Detayları Kısmı */
+.film-details {
+    text-align: center;
+    margin: 40px auto;
+}
+
+.film-details h2 {
+    color: #FFD700;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.film-details ul {
+    list-style: none;
+    padding: 0;
+}
+
+.film-details ul li {
+    display: inline-block;
+    margin: 10px;
+}
+
+.film-details ul li a {
+    color: rgba(177, 177, 2, 0.736);
+    font-size: 1.2em;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.film-details ul li a:hover {
+    color: #FFD700;
+}
+
+/* Evrende Yerini Al! Kısmı */
+.join-universe {
+    text-align: center;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 10px;
+    color: white;
+}
+
+.join-universe h2 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    color: #FFD700;
+}
+
+.join-universe p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.join-button {
+    background-color: yellow;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.join-button:hover {
+    background-color: #FFD700;
+    transform: scale(1.05);
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+    .film-details h2 {
+        font-size: 1.8em;
+    }
+
+    .join-universe h2 {
+        font-size: 2.2em;
+    }
+
+    .join-universe p {
+        font-size: 1em;
+    }
+
+    .join-button {
+        font-size: 16px;
+        padding: 10px 25px;
+    }
+}
+
+p {
+    text-align: center;
+    font-size: 1.2em;
+    color: #fff;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+/* Liste Stili */
+ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+ul li {
+    margin: 15px 0;
+}
+
+ul li a {
+    color: #FFE81F;
+    font-size: 1.3em;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-weight: bold;
+    display: inline-block;
+}
+
+ul li a:hover {
+    background-color: #FFE81F;
+    color: black;
+    transform: scale(1.1); /* Hover efektiyle biraz büyüme */
+}
+
+/* Mobile-Friendly */
+@media (max-width: 600px) {
+    h3 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1.1em;
+    }
+
+    ul li a {
+        font-size: 1.2em;
+        padding: 10px 20px;
+    }
+}
+
+/* =======================
+   RESPONSIVE TASARIM
+======================= */
+
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        padding: 12px;
+        font-size: 1em;
+        width: 100%;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    .question {
+        margin-bottom: 25px;
+    }
+    
+    button {
+        width: 100%;
+        font-size: 1.2em;
+        padding: 15px 0;
+    }
+
+
+/* Mobil uyumlu */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        margin: 10px 0;
+    }
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 0;
+}
+
+nav li a {
+    color: rgb(255, 219, 88);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav li a:hover {
+    text-decoration: underline;
+}
+
+/* Filmler sayfasındaki tablo için özel stil */
+.table-wrapper {
+    width: 95%;
+    margin: 20px auto;
+    overflow-x: auto;
+}
+
+/* Paragraf (katılmaya çağrı kısmı) */
+p {
+    font-size: 16px;
+    color: #ccc;
+    margin-top: 10px;
+}
+
+/* Üye Ol butonu */
+a button {
+    background-color: #ffe81f;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+}
+
+a button:hover {
+    background-color: #fff100;
+    box-shadow: 0 0 15px #ffe81f;
+    transform: scale(1.05);
+}
+/* Genel Stil */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* NAVBAR */
+nav {
+    background-color: #111;
+    padding: 10px 0;
+}
+
+.navbar {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar li a {
+    text-decoration: none;
+    color: #ffe81f;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.navbar li a:hover,
+.navbar li a.aktif {
+    background-color: #ffe81f;
+    color: black;
+}
+/* Üyelik tablosu için özel stil */
+/* Üye Tablosu */
+.uyelik-tablosu {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.uyelik-tablosu th, .uyelik-tablosu td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ffffff33;
+}
+
+.uyelik-tablosu th {
+    background-color: #222;
+    color: #FFD700;
+    font-weight: bold;
+}
+
+.uyelik-tablosu td {
+    background-color: #333;
+    color: #fff;
+}
+
+.uyelik-tablosu tr:nth-child(even) {
+    background-color: #444;
+}
+
+/* Silme Butonu */
+.sil-button {
+    background-color: crimson;
+    color: white;
+    padding: 12px 25px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sil-button:hover {
+    background-color: darkred;
+}
+.uyelik-tablosu {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(3px);
+    overflow-x: auto; /* Masaüstü için scroll koruması */
+}
+
+/* Tablo hücreleri */
+.uyelik-tablosu th,
+.uyelik-tablosu td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ffffff33;
+}
+
+/* Başlıklar */
+.uyelik-tablosu th {
+    background-color: #222;
+    color: #FFD700;
+    font-weight: bold;
+}
+
+/* Arama kutusu */
+#aramaKutusu {
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #111;
+    color: white;
+    padding: 8px;
+    width: 250px;
+    outline: none;
+    margin-top: 10px;
+}
+
+#aramaKutusu::placeholder {
+    color: #aaa;
+}
+
+/* Silme butonları */
+.uyelik-tablosu button {
+    border-radius: 5px;
+    border: none;
+    padding: 8px 16px;
+    font-weight: bold;
+    background-color: crimson;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.uyelik-tablosu button:hover {
+    background-color: darkred;
+}
+
+/* ✅ Responsive görünüm: Küçük ekranlar için tablo yatay scroll alır */
+@media (max-width: 768px) {
+    .uyelik-tablosu {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    #aramaKutusu {
+        width: 100%;
+    }
+}
+
+/* --- Radio butonlarının hizalanması --- */
+.taraf-secimi {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.taraf-secimi input[type="radio"] {
+    margin-right: 5px;
+    transform: scale(1.2);
+}
+
+/* --- Radio yazılarının renkleri (isteğe göre düzenle) --- */
+.aydinlik-label {
+    color: #00BFFF;
+}
+
+.karanlik-label {
+    color: #FF4500;
+}
+
+/* --- Buton grubu hizalaması --- */
+.form-butonlari {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* --- Kayıt ve Temizle butonları stilleri --- */
+.kayit-btn {
+    background-color: #5ac95d;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.kayit-btn:hover {
+    background-color: #4caf50;
+}
+
+.temizle-btn {
+    background-color: #fb5e56cd;
+    color: rgb(225, 127, 127);
+    padding: 5px 5px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.temizle-btn:hover {
+    background-color: #a85c59;
+}
+table {
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+    border-collapse: collapse;
+    overflow-x: auto;
+}
+/* GENEL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Orbitron', 'Arial', sans-serif;
+    background-color: #0d1117;
+    color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+/* NAVBAR – AYNI BIRAKILDI */
+.nav-container {
+    background-color: #111;
+    margin: 0 auto;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px #FFE81F88;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #FFE81F;
+    text-decoration: none;
+    padding: 15px;
+    font-weight: bold;
+    border: 1px solid #FFE81F;
+    border-radius: 8px;
+    margin: 5px;
+    transition: all 0.3s ease;
+    background-color: #222;
+    text-align: center;
+    width: 150px;
+}
+
+nav a:hover {
+    background-color: #FFE81F;
+    color: black;
+    transform: scale(1.1);
+}
+
+/* FILMLER TABLOSU – SADECE film-table sınıfı için geçerli */
+.table-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 30px 10px;
+    box-sizing: border-box;
+}
+
+.film-table {
+    width: 100%;
+    max-width: 1000px;
+    border-collapse: collapse;
+    font-family: 'Orbitron', 'Arial', sans-serif;
+    background-color: #0d1117;
+    color: #f5f5f5;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+}
+
+/* Başlık hücreleri */
+.film-table th {
+    background-color: #161b22;
+    color: #00ffff;
+    text-transform: uppercase;
+    padding: 14px;
+    border-bottom: 2px solid #00ffff;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.film-table th:hover {
+    background-color: #1c222a;
+}
+
+/* İçerik hücreleri */
+.film-table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #2b313a;
+    font-size: 15px;
+    color: #e2e2e2;
+}
+
+/* Satır desenleri */
+.film-table tr:nth-child(even) {
+    background-color: #11161d;
+}
+
+.film-table tr:hover {
+    background-color: #1a1f27;
+    transform: scale(1.005);
+    transition: all 0.2s ease-in-out;
+}
+
+/* Linkler */
+.film-table a {
+    color: #00ffff;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.film-table a:hover {
+    color: #ffcc00;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .film-table th,
+    .film-table td {
+        padding: 10px 5px;
+        font-size: 13px;
+    }
+}
+
+}
+.sw-title {
+  font-size: 48px;
+  color: #f2ff00; /* mavi */
+  text-shadow:
+    0 0 5px #00f7ff,
+    0 0 10px #00bfff,
+    0 0 20px #1e90ff,
+    0 0 40px #1e90ff,
+    0 0 60px #1e90ff;
+  font-family: 'Orbitron', sans-serif;
+  text-align: center;
+  margin-top: 40px;
+  letter-spacing: 2px;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow:
+      0 0 5px #00bfff,
+      0 0 10px #00bfff,
+      0 0 20px #1e90ff;
+  }
+  to {
+    text-shadow:
+      0 0 10px #00bfff,
+      0 0 20px #00bfff,
+      0 0 40px #1e90ff,
+      0 0 60px #1e90ff;
+  }
+
+}
+/* SADECE Hakkımızda sayfası için */
+.about-page {
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.about-title {
+    color: #feda4a; /* Star Wars sarısı */
+    font-size: 2em;
+    margin-top: 30px;
+}
+
+.about-text {
+    max-width: 700px;
+    margin: auto;
+    padding: 10px;
+    line-height: 1.6;
+}
+
+.about-slogan {
+    font-size: 1.4em;
+    font-style: italic;
+    margin: 20px 0;
+    color: #ffcc00;
+}
+
+.about-contact a {
+    color: rgba(255, 255, 0, 0.786);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.official-link {
+    color: #ead40cc4;
+    font-weight: bold;
+    text-decoration: underline;
+}
+/* SADECE SSS (faq) sayfası için */
+.faq-page {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+.faq-title {
+    color: #feda4a;
+    font-size: 2em;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.faq-content {
+    max-width: 800px;
+    margin: auto;
+    text-align: left;
+    padding: 20px;
+    text-align: center;
+}
+
+.faq-question {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.faq-question h2 {
+    color: #ffcc00;
+    font-size: 1.4em;
+    text-align: center;
+}
+
+.faq-question p,
+.faq-question ul {
+    font-size: 1em;
+    line-height: 1.6;
+    text-align: center;
+}
+.faq-question ul {
+    list-style-position: inside; /* madde işaretlerini ortalamaya uygun hale getirir */
+    padding: 0;
+    margin: 0;
+}
+
+
+
+

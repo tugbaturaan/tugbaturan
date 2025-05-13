@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Üye Listesi</title>
+
+    <!-- Harici stil dosyası -->
+    <link rel="stylesheet" href="../styles/style.css">
+<link rel="icon" href="../sayfalar/img/favicon.png" type="image/png">
+</head>
+<body>
+
+    <!-- Ortak Navigasyon Menüsü -->
+    <nav>
+        <a href="/index.html">Ana Sayfa</a>
+        <a href="/sayfalar/filmler.html">Filmler</a>
+        <a href="/sayfalar/hakkimizda.html">Hakkımızda</a>
+        <a href="/sayfalar/sss.html">SSS</a>
+        <a href="/sayfalar/form.html">Üye Ol</a>
+        <a href="/sayfalar/test.html">Test</a>
+    </nav>
+
+    <!-- Ana İçerik Alanı -->
+    <main class="container">
+
+        <h1>Galaktik Üyeler</h1>
+
+        <!-- Arama Kutusu -->
+        <div class="arama-alani">
+            <label for="aramaKutusu">Üyelerde Ara:</label><br>
+            <input type="text" id="aramaKutusu" placeholder="İsim veya taraf yaz..." />
+        </div>
+
+        <!-- Üye Tablosu -->
+        <table id="uyeTablosu" class="uyelik-tablosu">
+            <thead>
+                <tr>
+                    <th>İsim</th>
+                    <th>Email</th>
+                    <th>Telefon</th>
+                    <th>Yaş</th>
+                    <th>Taraf</th>
+                    <th>İşlem</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- JavaScript ile doldurulacak -->
+            </tbody>
+        </table>
+
+        <!-- Tüm Kayıtları Sil Butonu -->
+        <button onclick="tumKayitlariSil()" class="sil-button">
+            Tüm Kayıtları Sil
+        </button>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="galactic-footer">
+        <p><small>&copy; 2025 Star Wars Akademisi™ – Tüm Hakları Saklıdır.</small></p>
+        <p><small>Lucasfilm Ltd.® içeriklerini temel alır. Bu site resmi değildir.</small></p>
+        <p><a href="https://www.starwars.com" target="_blank">StarWars.com</a></p>
+    </footer>
+
+    <!-- JavaScript bağlantısı -->
+    <script src="../scripts/myscript.js"></script>
+</body>
+</html>
